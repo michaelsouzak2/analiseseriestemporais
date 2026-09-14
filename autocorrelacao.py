@@ -64,14 +64,14 @@ indice = pd.date_range('1749', periods=len(dados2), freq='ME')
 serie2 = pd.Series(dados2['valores'].values, index=indice)
 # print(serie2)
 
-# serie2.plot()
+serie2.plot()
 # plt.show()
 
-# plot_acf(serie2)
+plot_acf(serie2)
 # plt.show()
 
-# plot_pacf(serie2)
-# plt.show()
+plot_pacf(serie2)
+plt.show()
 
 resultado_kpss = kpss(serie2, result_object=True)
 print(f"\nTeste KPSS:")
